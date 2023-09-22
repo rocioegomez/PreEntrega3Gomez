@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+header {
+  height: 180px;
+  border-bottom: 4px double black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*align-items: center;*/
+  gap: 13px;
+  grid-area: header;
+}
+header h1 {
+  margin: 0;
+}
+header div {
+  padding: 0 15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header div p {
+  font-size: 12px;
+}
+header div p span {
+  font-weight: 700;
+}
+header div button {
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 50px;
+}
+header h1 {
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.main-container {
+  min-height: calc(100vh - 180px);
+  margin: 50px 15px 50px 15px;
+  display: grid;
+  grid-template-areas: "header header header" "sectionA sectionA sectionA" "adB adB adB" "sectionB sectionB adA" "footer footer footer";
+}
+.main-container .sectionA {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-area: sectionA;
+}
+.main-container .sectionA article {
+  border-bottom: 1px solid grey;
+  padding: 0 0 20px 0;
+}
+.main-container .sectionA article .imageA {
+  width: 100%;
+}
+.main-container .sectionA article div p {
+  color: #5A5A5A;
+  padding: 10px 0 10px 0;
+}
+.main-container .sectionB {
+  display: flex;
+  flex-direction: column;
+  grid-area: sectionB;
+  gap: 15px;
+}
+.main-container .sectionB article .imageB {
+  width: 100%;
+}
+.main-container .sectionB article p {
+  color: #5A5A5A;
+  padding-top: 5px;
+}
+.main-container .adA {
+  text-align: center;
+  grid-area: adA;
+}
+.main-container .adB {
+  margin: 40px 0 40px 0;
+  grid-area: adB;
+}
+.main-container .adB img {
+  width: 100%;
+}
+
+.world-container {
+  min-height: calc(100vh - 180px);
+  margin: 0px 15px 50px 15px;
+  display: grid;
+  grid-template-areas: "header " "world_h1" "sectionC" "sectionD" "sectionE" "sectionF" "footer";
+  gap: 30px 0;
+}
+.world-container .world-container__h1 {
+  grid-area: world_h1;
+}
+.world-container .sectionC {
+  grid-area: sectionC;
+}
+.world-container .sectionC article p {
+  color: #5A5A5A;
+}
+.world-container .sectionD {
+  grid-area: sectionD;
+}
+.world-container .sectionD article p {
+  color: #5A5A5A;
+}
+.world-container .sectionE {
+  display: flex;
+  flex-direction: column;
+  grid-area: sectionE;
+}
+.world-container .sectionE article {
+  padding-bottom: 10px;
+}
+.world-container .sectionE article p {
+  color: #5A5A5A;
+}
+.world-container .sectionF {
+  border-top: 1px solid black;
+  margin-top: 20px;
+  padding: 50px 0 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4%;
+  grid-area: sectionF;
+}
+.world-container .sectionF article {
+  width: 48%;
+}
+.world-container .sectionF article h3 {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.imageC {
+  max-height: 70%;
+  width: 100%;
+}
+
+.login-container {
+  min-height: calc(100vh - 180px);
+  margin: 50px 15px 50px 15px;
+}
+.login-container form {
+  width: 60%;
+}
+.login-container form button {
+  background-color: black;
+  border: none;
+}
+
+footer {
+  border-top: 4px double grey;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+}
+
+/*TABLET VERSION*/
+@media (min-width: 768px) {
+  header div {
+    padding: 0 30px 0 30px;
+  }
+  .main-container {
+    margin: 50px 30px 50px 30px;
+  }
+  .main-container .sectionA article {
+    display: flex;
+    gap: 10px;
+  }
+  .main-container .sectionA article .imageA {
+    width: 60%;
+  }
+  .main-container .sectionA article div p {
+    padding-top: 10px;
+  }
+  /*World*/
+  .world-container {
+    margin: 0px 30px 50px 30px;
+    grid-template-areas: "header header header" "world_h1 world_h1 world_h1" "sectionC sectionC sectionD" "sectionE sectionE sectionE" "sectionF sectionF sectionF" "footer footer footer";
+    column-gap: 20px;
+  }
+  .world-container .sectionE {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .world-container .sectionE article {
+    padding-bottom: 0;
+  }
+  .world-container .sectionE article h2 {
+    padding-bottom: 5px;
+  }
+  .world-container .sectionF {
+    padding-bottom: 0;
+    gap: 4%;
+    justify-content: center;
+  }
+  .world-container .sectionF article {
+    width: 20%;
+  }
+}
+/*DESKTOP VERSION*/
+@media (min-width: 1024px) {
+  .main-container {
+    /*grid-template-columns: 3fr 1fr 1fr;*/
+    grid-template-areas: "header header header header" "sectionA sectionA sectionB adA" "adB adB adB adB" "footer footer footer footer";
+    column-gap: 30px;
+  }
+  /*World*/
+  .world-container {
+    grid-template-areas: "header header header header" "world_h1 world_h1 world_h1 world_h1" "sectionC sectionC sectionD sectionE" "sectionF sectionF sectionF sectionF" "footer footer footer footer";
+    column-gap: 30px;
+  }
+  .world-container .sectionE {
+    flex-direction: column;
+  }
+  .world-container .sectionF {
+    gap: 4%;
+  }
+  .world-container .sectionF article {
+    width: 20%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

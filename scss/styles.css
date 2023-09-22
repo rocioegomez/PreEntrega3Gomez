@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+header {
+  height: 180px;
+  border-bottom: 4px double black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*align-items: center;*/
+  gap: 13px;
+  grid-area: header;
+}
+header div {
+  padding: 0 12px 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header div p {
+  font-size: 12px;
+}
+header div p span {
+  font-weight: 700;
+}
+header div button {
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 50px;
+}
+header h1 {
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+main {
+  min-height: calc(100vh - 180px);
+  margin: 50px 15px 50px 15px;
+  display: grid;
+  grid-template-areas: "header header header" "sectionA sectionA sectionA" "adB adB adB" "sectionB sectionB adA";
+}
+
+.sectionA {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-area: sectionA;
+}
+
+.sectionA article {
+  border-bottom: 1px solid grey;
+  padding: 0 0 20px 0;
+}
+
+.sectionA article div p {
+  color: #5A5A5A;
+  padding: 10px 0 10px 0;
+}
+
+.sectionB {
+  display: flex;
+  flex-direction: column;
+  grid-area: sectionB;
+  gap: 15px;
+}
+
+.sectionB article p {
+  color: #5A5A5A;
+  padding-top: 5px;
+}
+
+.imageA, .imageB {
+  width: 100%;
+}
+
+.adA {
+  text-align: center;
+  grid-area: adA;
+}
+
+.adB {
+  margin: 40px 0 40px 0;
+  grid-area: adB;
+}
+
+.adB img {
+  width: 100%;
+}
+
+/*PAGE - OPINION*/
+.opinion, .world {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  border-top: 4px double grey;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+}
+
+/*TABLET VERSION*/
+@media (min-width: 768px) {
+  main {
+    margin: 50px 30px 50px 30px;
+  }
+  .sectionA article {
+    display: flex;
+    gap: 10px;
+  }
+  .sectionA article div p {
+    padding-top: 10px;
+  }
+  .imageA {
+    width: 60%;
+  }
+}
+/*DESKTOP VERSION*/
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-areas: "header header header" "sectionA sectionB adA" "adB adB adB" "footer footer footer";
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}/*# sourceMappingURL=styles.css.map */

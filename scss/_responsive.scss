@@ -1,0 +1,99 @@
+
+/*TABLET VERSION*/
+@media (min-width: 768px) {
+    header {
+        div {
+          padding: 0 30px 0 30px;
+        }
+    }
+
+    .main-container {
+        margin: 50px 30px 50px 30px;
+
+        .sectionA article {
+            display: flex;
+            gap: 10px;
+
+            .imageA {
+                    width: 60%;
+                }
+
+            div p {
+                padding-top: 10px;
+            }
+        }
+    }
+
+    /*World*/
+    .world-container {
+        margin: 0px 30px 50px 30px;
+        grid-template-areas: 
+        "header header header"
+        "world_h1 world_h1 world_h1"
+        "sectionC sectionC sectionD"
+        "sectionE sectionE sectionE"
+        "sectionF sectionF sectionF"
+        "footer footer footer";
+        column-gap: 20px;
+
+        .sectionE {
+            flex-direction: row;
+            gap: 30px;
+
+            article {
+                padding-bottom: 0;
+                h2 {
+                    padding-bottom: 5px;
+                }
+            }
+        }
+
+        .sectionF {
+            padding-bottom: 0;
+            gap: 4%;
+            justify-content: center;
+            article {
+                width: 20%;
+            }
+        }
+    }
+    
+
+}
+
+/*DESKTOP VERSION*/
+@media (min-width: 1024px) {
+    .main-container {
+        /*grid-template-columns: 3fr 1fr 1fr;*/
+        grid-template-areas:
+        "header header header header"
+        "sectionA sectionA sectionB adA"
+        "adB adB adB adB"
+        "footer footer footer footer";
+        column-gap: 30px;
+    }
+
+    /*World*/
+    .world-container {
+        grid-template-areas: 
+        "header header header header"
+        "world_h1 world_h1 world_h1 world_h1"
+        "sectionC sectionC sectionD sectionE"
+        "sectionF sectionF sectionF sectionF"
+        "footer footer footer footer";
+        column-gap: 30px;
+
+        .sectionE {
+            flex-direction: column;
+        }
+
+        .sectionF {
+            gap: 4%;
+            article {
+                width: 20%;
+            }
+        }
+
+    }
+
+}
